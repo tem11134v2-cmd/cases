@@ -174,11 +174,18 @@ td.na { color:var(--muted); font-weight:600; }
 .case .cover svg { position:absolute; inset:0; width:100%; height:100%; display:block; }
 .case .big { position:absolute; left:14px; top:12px; background:rgba(255,255,255,.92); color:var(--blue); font-weight:800; font-size:26px; border-radius:10px; padding:5px 12px 6px; line-height:1.1; font-variant-numeric:tabular-nums; backdrop-filter:blur(2px); }
 .case .big small { display:block; font-size:11px; color:var(--muted); font-weight:700; }
-/* Плашка с логотипом — вырезанная шапка скриншота, без отдельного файла */
-.case .logo-chip { position:absolute; right:10px; bottom:10px; width:158px; height:44px; overflow:hidden;
-                   background:#fff; border:1px solid var(--border); border-radius:8px; display:block;
-                   box-shadow:0 2px 8px rgba(0,20,140,.10); }
-.case .logo-chip img { position:absolute; width:720px; max-width:none; height:auto; display:block; }
+/* Логотип сайта на обложке карточки */
+.case .logo-chip { position:absolute; right:12px; bottom:12px; width:48px; height:48px; border-radius:12px;
+                   background:#fff; border:1px solid var(--border); display:flex; align-items:center;
+                   justify-content:center; box-shadow:0 2px 10px rgba(0,20,140,.12); }
+.case .logo-chip img { width:30px; height:30px; object-fit:contain; display:block; }
+
+/* Заглушка первого экрана, если скриншот снять не удалось */
+.frame .plate { aspect-ratio:16/10; display:flex; flex-direction:column; align-items:center; justify-content:center;
+                gap:10px; background:linear-gradient(160deg,#e6e9fb,#f6f7fe); text-align:center; padding:20px; }
+.frame .plate-logo { width:64px; height:64px; object-fit:contain; }
+.frame .plate b { font-family:"Comfortaa","Nunito",sans-serif; font-size:20px; color:var(--blue); }
+.frame .plate span { font-size:13px; color:var(--muted); }
 .case .body { padding:12px 14px 14px; }
 
 /* другие кейсы — простой список, а не вторая сетка карточек */
@@ -338,7 +345,7 @@ footer .wrap { display:flex; align-items:center; gap:12px; flex-wrap:wrap; color
     <a class="btn" href="https://t.me/TimurNovruzov?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D0%B8%D1%88%D1%83%20%D0%BF%D0%BE%20%D0%BA%D0%B5%D0%B9%D1%81%D1%83%20vivarent.ru" rel="noopener">Написать Тимуру</a>
   </section>
 
-  <section class="card"><h2>Другие кейсы</h2><ul class="other"><li><a href="../ltenergy/"><b>Портативные электростанции и солнечные модули</b> — Магазин портативных электростанций: визитов из поиска в 4,6 раза больше за полгода</a> <span class="muted small">145 → 663 визитов из поиска в месяц</span></li><li><a href="../massazh-omsk/"><b>Спа-салон и массаж</b> — Спа-салон в Омске: вдвое больше визитов из поиска при минимальных правках сайта</a> <span class="muted small">362 → 671 визитов из поиска в месяц</span></li><li><a href="../ti-o-ty/"><b>Ремонт обуви, сумок и изделий из кожи</b> — Ремонт обуви и кожи в Петербурге: визитов из поиска в 7 раз больше после перехода с лендинга</a> <span class="muted small">20 → 146 визитов из поиска в месяц</span></li><li><a href="../spk-nhs/"><b>Нефтехимическое оборудование</b> — Нефтехимическое оборудование: новый сайт вместо сайта 2008 года и 470 визитов из поиска сразу</a> <span class="muted small">0 → 470 визитов из поиска в первый месяц</span></li><li><a href="../lp-teh/"><b>Складская и строительная техника</b> — Поставщик спецтехники: визитов из поиска в 11 раз больше, конверсия выше, чем у рекламы</a> <span class="muted small">40 → 466 визитов из поиска в месяц</span></li></ul></section>
+  <section class="card"><h2>Другие кейсы</h2><ul class="other"><li><a href="../kadrovy-element/"><b>Кадровое агентство</b> — Кадровое агентство: сайт с нуля дал 1 773 визита и 180 обращений из поиска за первый месяц</a> <span class="muted small">0 → 1 773 визитов из поиска за первый месяц</span></li><li><a href="../ltenergy/"><b>Портативные электростанции и солнечные модули</b> — Магазин портативных электростанций: визитов из поиска в 4,6 раза больше за полгода</a> <span class="muted small">145 → 663 визитов из поиска в месяц</span></li><li><a href="../massazh-omsk/"><b>Спа-салон и массаж</b> — Спа-салон в Омске: вдвое больше визитов из поиска при минимальных правках сайта</a> <span class="muted small">362 → 671 визитов из поиска в месяц</span></li><li><a href="../ti-o-ty/"><b>Ремонт обуви, сумок и изделий из кожи</b> — Ремонт обуви и кожи в Петербурге: визитов из поиска в 7 раз больше после перехода с лендинга</a> <span class="muted small">20 → 146 визитов из поиска в месяц</span></li><li><a href="../spk-nhs/"><b>Нефтехимическое оборудование</b> — Нефтехимическое оборудование: новый сайт вместо сайта 2008 года и 470 визитов из поиска сразу</a> <span class="muted small">0 → 470 визитов из поиска в первый месяц</span></li><li><a href="../lp-teh/"><b>Складская и строительная техника</b> — Поставщик спецтехники: визитов из поиска в 11 раз больше, конверсия выше, чем у рекламы</a> <span class="muted small">40 → 466 визитов из поиска в месяц</span></li></ul></section>
 </main>
 <script>
 document.querySelectorAll('.chart').forEach(function(chart){

@@ -174,11 +174,18 @@ td.na { color:var(--muted); font-weight:600; }
 .case .cover svg { position:absolute; inset:0; width:100%; height:100%; display:block; }
 .case .big { position:absolute; left:14px; top:12px; background:rgba(255,255,255,.92); color:var(--blue); font-weight:800; font-size:26px; border-radius:10px; padding:5px 12px 6px; line-height:1.1; font-variant-numeric:tabular-nums; backdrop-filter:blur(2px); }
 .case .big small { display:block; font-size:11px; color:var(--muted); font-weight:700; }
-/* Плашка с логотипом — вырезанная шапка скриншота, без отдельного файла */
-.case .logo-chip { position:absolute; right:10px; bottom:10px; width:158px; height:44px; overflow:hidden;
-                   background:#fff; border:1px solid var(--border); border-radius:8px; display:block;
-                   box-shadow:0 2px 8px rgba(0,20,140,.10); }
-.case .logo-chip img { position:absolute; width:720px; max-width:none; height:auto; display:block; }
+/* Логотип сайта на обложке карточки */
+.case .logo-chip { position:absolute; right:12px; bottom:12px; width:48px; height:48px; border-radius:12px;
+                   background:#fff; border:1px solid var(--border); display:flex; align-items:center;
+                   justify-content:center; box-shadow:0 2px 10px rgba(0,20,140,.12); }
+.case .logo-chip img { width:30px; height:30px; object-fit:contain; display:block; }
+
+/* Заглушка первого экрана, если скриншот снять не удалось */
+.frame .plate { aspect-ratio:16/10; display:flex; flex-direction:column; align-items:center; justify-content:center;
+                gap:10px; background:linear-gradient(160deg,#e6e9fb,#f6f7fe); text-align:center; padding:20px; }
+.frame .plate-logo { width:64px; height:64px; object-fit:contain; }
+.frame .plate b { font-family:"Comfortaa","Nunito",sans-serif; font-size:20px; color:var(--blue); }
+.frame .plate span { font-size:13px; color:var(--muted); }
 .case .body { padding:12px 14px 14px; }
 
 /* другие кейсы — простой список, а не вторая сетка карточек */
@@ -223,7 +230,7 @@ footer .wrap { display:flex; align-items:center; gap:12px; flex-wrap:wrap; color
       <path d="M17 16 L38 30 L28 31 L34 39 L30 40 L25 33 L19 38 Z" fill="#00148C"/>
     </svg><span class="wordmark">TIMUR SEO</span></a>
   <div class="crumbs">Кейсы</div>
-  <div class="upd"><b>6 кейсов</b>считаны по одной методике</div>
+  <div class="upd"><b>7 кейсов</b>считаны по одной методике</div>
 </div></div>
 <main class="wrap">
   <section class="hero"><h1>Кейсы продвижения</h1>
@@ -234,11 +241,24 @@ footer .wrap { display:flex; align-items:center; gap:12px; flex-wrap:wrap; color
     <path d="M0,186 L30.8,184.6 L61.5,185.9 L92.3,184.7 L123.1,142.5 L153.8,60 L184.6,86 L215.4,101.3 L246.2,74.2 L276.9,112.7 L307.7,112 L338.5,93.9 L369.2,111.4 L400,99.1 L400,200 L0,200 Z" fill="url(#cov-vivarent)"/>
     <line x1="92.3" y1="0" x2="92.3" y2="200" stroke="#F98800" stroke-width="1" stroke-dasharray="3 3" vector-effect="non-scaling-stroke" opacity=".7"/>
     <path d="M0,186 L30.8,184.6 L61.5,185.9 L92.3,184.7 L123.1,142.5 L153.8,60 L184.6,86 L215.4,101.3 L246.2,74.2 L276.9,112.7 L307.7,112 L338.5,93.9 L369.2,111.4 L400,99.1" fill="none" stroke="#00148C" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
-  </svg><div class="big">55 → 948<small>визитов из поиска за три месяца</small></div><span class="logo-chip"><img src="assets/img/vivarent/screenshot-1280.png" alt="vivarent.ru" loading="lazy" style="left:-22.5px;top:-11.3px"></span></div>
+  </svg><div class="big">55 → 948<small>визитов из поиска за три месяца</small></div><span class="logo-chip"><img src="assets/img/vivarent/logo.png" alt="vivarent.ru" loading="lazy" width="128" height="128"></span></div>
   <div class="body">
     <div class="tags"><span>Аренда оборудования для мероприятий</span><span>·</span><span>Сайт услуг</span><span>·</span><span>Санкт-Петербург</span></div>
     <h3>Прокат оборудования в Петербурге: с 55 до 950 визитов из поиска за три месяца</h3>
     <div class="m2">Стартовали с 55 визитов · октябрь 2025</div>
+    <span class="go">Смотреть кейс →</span>
+  </div>
+</a><a class="case" href="kadrovy-element/">
+  <div class="cover"><svg viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true">
+    <defs><linearGradient id="cov-kadrovy-element" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#00148C" stop-opacity=".26"/><stop offset="1" stop-color="#00148C" stop-opacity=".02"/></linearGradient></defs>
+    <path d="M0,174.3 L50,186 L100,164.3 L150,116 L200,107.7 L250,81.4 L300,60 L350,85.1 L400,73.1 L400,200 L0,200 Z" fill="url(#cov-kadrovy-element)"/>
+    <line x1="0" y1="0" x2="0" y2="200" stroke="#F98800" stroke-width="1" stroke-dasharray="3 3" vector-effect="non-scaling-stroke" opacity=".7"/>
+    <path d="M0,174.3 L50,186 L100,164.3 L150,116 L200,107.7 L250,81.4 L300,60 L350,85.1 L400,73.1" fill="none" stroke="#00148C" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+  </svg><div class="big">0 → 1 773<small>визитов из поиска за первый месяц</small></div><span class="logo-chip"><img src="assets/img/kadrovy-element/logo.png" alt="кадровый-элемент.рф" loading="lazy" width="128" height="128"></span></div>
+  <div class="body">
+    <div class="tags"><span>Кадровое агентство</span><span>·</span><span>Сайт услуг</span><span>·</span><span>Россия</span></div>
+    <h3>Кадровое агентство: сайт с нуля дал 1 773 визита и 180 обращений из поиска за первый месяц</h3>
+    <div class="m2">Запуск с нуля · июль 2026</div>
     <span class="go">Смотреть кейс →</span>
   </div>
 </a><a class="case" href="ltenergy/">
@@ -247,7 +267,7 @@ footer .wrap { display:flex; align-items:center; gap:12px; flex-wrap:wrap; color
     <path d="M0,186 L50,166.5 L100,168.3 L150,161.9 L200,136 L250,137.4 L300,137.1 L350,106 L400,60 L400,200 L0,200 Z" fill="url(#cov-ltenergy)"/>
     <line x1="150" y1="0" x2="150" y2="200" stroke="#F98800" stroke-width="1" stroke-dasharray="3 3" vector-effect="non-scaling-stroke" opacity=".7"/>
     <path d="M0,186 L50,166.5 L100,168.3 L150,161.9 L200,136 L250,137.4 L300,137.1 L350,106 L400,60" fill="none" stroke="#00148C" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
-  </svg><div class="big">145 → 663<small>визитов из поиска в месяц</small></div><span class="logo-chip"><img src="assets/img/ltenergy/screenshot-1280.png" alt="ltenergy.ru" loading="lazy" style="left:-11.3px;top:-4.5px"></span></div>
+  </svg><div class="big">145 → 663<small>визитов из поиска в месяц</small></div><span class="logo-chip"><img src="assets/img/ltenergy/logo.png" alt="ltenergy.ru" loading="lazy" width="128" height="128"></span></div>
   <div class="body">
     <div class="tags"><span>Портативные электростанции и солнечные модули</span><span>·</span><span>Интернет-магазин</span><span>·</span><span>Россия</span></div>
     <h3>Магазин портативных электростанций: визитов из поиска в 4,6 раза больше за полгода</h3>
@@ -260,7 +280,7 @@ footer .wrap { display:flex; align-items:center; gap:12px; flex-wrap:wrap; color
     <path d="M0,186 L66.7,176.1 L133.3,178.1 L200,96.8 L266.7,60 L333.3,61.6 L400,65.5 L400,200 L0,200 Z" fill="url(#cov-massazh-omsk)"/>
     <line x1="200" y1="0" x2="200" y2="200" stroke="#F98800" stroke-width="1" stroke-dasharray="3 3" vector-effect="non-scaling-stroke" opacity=".7"/>
     <path d="M0,186 L66.7,176.1 L133.3,178.1 L200,96.8 L266.7,60 L333.3,61.6 L400,65.5" fill="none" stroke="#00148C" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
-  </svg><div class="big">362 → 671<small>визитов из поиска в месяц</small></div><span class="logo-chip"><img src="assets/img/massazh-omsk/screenshot-1280.png" alt="массаж-омск.рф" loading="lazy" style="left:-53.4px;top:-6.8px"></span></div>
+  </svg><div class="big">362 → 671<small>визитов из поиска в месяц</small></div><span class="logo-chip"><img src="assets/img/massazh-omsk/logo.png" alt="массаж-омск.рф" loading="lazy" width="128" height="128"></span></div>
   <div class="body">
     <div class="tags"><span>Спа-салон и массаж</span><span>·</span><span>Сайт услуг</span><span>·</span><span>Омск</span></div>
     <h3>Спа-салон в Омске: вдвое больше визитов из поиска при минимальных правках сайта</h3>
@@ -273,7 +293,7 @@ footer .wrap { display:flex; align-items:center; gap:12px; flex-wrap:wrap; color
     <path d="M0,186 L57.1,181.4 L114.3,156.4 L171.4,176.7 L228.6,178.6 L285.7,174 L342.9,170.3 L400,60 L400,200 L0,200 Z" fill="url(#cov-ti-o-ty)"/>
     <line x1="228.6" y1="0" x2="228.6" y2="200" stroke="#F98800" stroke-width="1" stroke-dasharray="3 3" vector-effect="non-scaling-stroke" opacity=".7"/>
     <path d="M0,186 L57.1,181.4 L114.3,156.4 L171.4,176.7 L228.6,178.6 L285.7,174 L342.9,170.3 L400,60" fill="none" stroke="#00148C" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
-  </svg><div class="big">20 → 146<small>визитов из поиска в месяц</small></div><span class="logo-chip"><img src="assets/img/ti-o-ty/screenshot-1280.png" alt="ti-o-ty.ru" loading="lazy" style="left:-19.7px;top:-10.1px"></span></div>
+  </svg><div class="big">20 → 146<small>визитов из поиска в месяц</small></div><span class="logo-chip"><img src="assets/img/ti-o-ty/logo.png" alt="ti-o-ty.ru" loading="lazy" width="128" height="128"></span></div>
   <div class="body">
     <div class="tags"><span>Ремонт обуви, сумок и изделий из кожи</span><span>·</span><span>Сайт услуг</span><span>·</span><span>Санкт-Петербург</span></div>
     <h3>Ремонт обуви и кожи в Петербурге: визитов из поиска в 7 раз больше после перехода с лендинга</h3>
@@ -286,7 +306,7 @@ footer .wrap { display:flex; align-items:center; gap:12px; flex-wrap:wrap; color
     <path d="M0,186 L57.1,156.7 L114.3,153.2 L171.4,146.3 L228.6,89.3 L285.7,76.4 L342.9,80.7 L400,60 L400,200 L0,200 Z" fill="url(#cov-spk-nhs)"/>
     <line x1="114.3" y1="0" x2="114.3" y2="200" stroke="#F98800" stroke-width="1" stroke-dasharray="3 3" vector-effect="non-scaling-stroke" opacity=".7"/>
     <path d="M0,186 L57.1,156.7 L114.3,153.2 L171.4,146.3 L228.6,89.3 L285.7,76.4 L342.9,80.7 L400,60" fill="none" stroke="#00148C" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
-  </svg><div class="big">0 → 470<small>визитов из поиска в первый месяц</small></div><span class="logo-chip"><img src="assets/img/spk-nhs/screenshot-1280.png" alt="spk-nhs.ru" loading="lazy" style="left:-11.3px;top:-4.5px"></span></div>
+  </svg><div class="big">0 → 470<small>визитов из поиска в первый месяц</small></div><span class="logo-chip"><img src="assets/img/spk-nhs/logo.png" alt="spk-nhs.ru" loading="lazy" width="128" height="128"></span></div>
   <div class="body">
     <div class="tags"><span>Нефтехимическое оборудование</span><span>·</span><span>Корпоративный сайт с каталогом</span><span>·</span><span>Россия</span></div>
     <h3>Нефтехимическое оборудование: новый сайт вместо сайта 2008 года и 470 визитов из поиска сразу</h3>
@@ -299,7 +319,7 @@ footer .wrap { display:flex; align-items:center; gap:12px; flex-wrap:wrap; color
     <path d="M0,186 L100,179.4 L200,161.5 L300,135.4 L400,60 L400,200 L0,200 Z" fill="url(#cov-lp-teh)"/>
     <line x1="200" y1="0" x2="200" y2="200" stroke="#F98800" stroke-width="1" stroke-dasharray="3 3" vector-effect="non-scaling-stroke" opacity=".7"/>
     <path d="M0,186 L100,179.4 L200,161.5 L300,135.4 L400,60" fill="none" stroke="#00148C" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
-  </svg><div class="big">40 → 466<small>визитов из поиска в месяц</small></div><span class="logo-chip"><img src="assets/img/lp-teh/screenshot-1280.png" alt="lp-teh.ru" loading="lazy" style="left:-14.1px;top:-7.9px"></span></div>
+  </svg><div class="big">40 → 466<small>визитов из поиска в месяц</small></div><span class="logo-chip"><img src="assets/img/lp-teh/logo.png" alt="lp-teh.ru" loading="lazy" width="128" height="128"></span></div>
   <div class="body">
     <div class="tags"><span>Складская и строительная техника</span><span>·</span><span>Интернет-магазин</span><span>·</span><span>Екатеринбург</span></div>
     <h3>Поставщик спецтехники: визитов из поиска в 11 раз больше, конверсия выше, чем у рекламы</h3>
